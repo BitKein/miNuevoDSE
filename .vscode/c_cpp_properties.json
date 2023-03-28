@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "intelliSenseMode": "windows-gcc-x64",
+            "includePath": [
+                "C:\\Program Files (x86)\\Microchip\\xc16\\v1.36\\support\\PIC24H\\h"
+            ],
+            "compilerPath": "C:\\TDM-GCC-64\\bin\\gcc.exe",
+            "cStandard": "c17",
+            "cppStandard": "gnu++14"
+        }
+    ],
+    "version": 4
+}

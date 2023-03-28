@@ -1,0 +1,19 @@
+
+Previo: 
+
+2- 	Poniendo a 0/1 los bits de TRIS.
+
+3- 	Pulsadores = .L , baja
+
+4-	Pulsadores como entrada. En este caso, el pulsador S3 corresponde con TRIS(D6).
+	TRISDbits.TRISD6 = 1;
+	
+5-	LEDS = .H , alta
+	Pin LEDS: LAT(A);
+	
+6-	Leds como salida.
+
+
+
+Realizaci´n
+

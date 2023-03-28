@@ -1,0 +1,10 @@
+{
+	"files.associations": {
+		"p24hj256gp610a.h": "c",
+		"commons.h": "c",
+		"timers.h": "c",
+		"adc1.h": "c",
+		"utilidades.h": "c",
+		"cn.h": "c"
+	}
+}

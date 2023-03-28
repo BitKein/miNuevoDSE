@@ -1,0 +1,36 @@
+Project Properties > xc16 > common include dirs
+
+C:\Program Files (x86)\Microchip\xc16\v1.36\support\PIC24H\h
+
+-------------------------------------------------------------
+
+        // Pulsadores: lógica NEGATIVA
+        // LEDs: lógica POSITIVA
+		// Nops para el debugger (breaks actúan tarde -- 2-3 instr.)
+
+TRIS es un registro para los puertos.
+Cómo indicar si I/O -> en el I/O Pin, activar para input, desactivar para output.
+
+Dos formas de cambiar valores al registro:
+
+	1.		TRISD = 0xYYYY; // Para los 16 bits
+	
+	2.		TRISDbits.TRISD1 = 1; // para bits individuales. en este caso, el bit 1
+	
+
+Desactivar los últimos 8 bits del registro TRIS(A) habilitan los leds.
+
+	TRISA = 0xFF00;  // ponemos los bits a 0 para indicar que queremos que sean de salida.
+						Poner 0x0000 que 0xFF00 sería indistinto.
+						
+	Valores de TRIS(A):
+		0xFFFF = pulsadores
+		0xFF00 = LEDs (valor mínimo)
+
+El LAT(A) (Data Latch) lo ponemos a 1 para que se active la señal, siempre y cuando TRIS (TRIS Latch) sea de salida.
+
+------------------------------------------------------------
+
+En el mapa de pines, hay pines que no están conectados a nada. Estos no se encenderán si les ponemos a 1. Lo podemos comprobar con el debugger.
+
+	Ej: TRISA = 0xFF00; --> 0xF600 // los pines 8 y 11 están desactivados.

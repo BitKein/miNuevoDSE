@@ -37,8 +37,8 @@ void _ISR_NO_PSV _CNInterrupt() {
 	if (!PORTDbits.RD13) // pulsador S4
         flag_CN = 1;
 
-    if (!PORTDbits.RD6) { // pulsador S6
-        flag_dutyPorUART ^= 1;
+    if (!PORTDbits.RD7) { // pulsador S6
+        flag_dutyPorUART = !flag_dutyPorUART;
     }
 
     // Desactiva el flag IF

@@ -1,3 +1,3 @@
-build/default/debug/_ext/1472/utilidades.o:  \
-../utilidades.c  \
-../commons.h 
+build/default/debug/_ext/1472/utilidades.o: ../utilidades.c ../commons.h
+
+../commons.h:

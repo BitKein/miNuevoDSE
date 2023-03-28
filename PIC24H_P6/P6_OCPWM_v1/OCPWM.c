@@ -66,15 +66,29 @@ void update_duty(){
 }
 
 void updateOnLCD_PWM(){
+    Nop();
+    Nop();
+    Nop();
+    
+    unsigned char conv[4];
+    //Coversion del valor OC1RS a ascii
+    conversion_sensores(conv,(unsigned int)OC1RS);
+    Nop();
+    Nop();
+    Nop();
+    
     // Actualizar LCD
     switch(pagina_LCD){
         case 3:
             // Actualizar valor de los Duty cycles del servomotor
-            Ventana_LCD[0][pos_der3] = ascii[iDUTY][0];
-            Ventana_LCD[0][pos_der2] = ascii[iDUTY][1];
-            Ventana_LCD[0][pos_der1] = ascii[iDUTY][2];
-            Ventana_LCD[0][pos_der0] = ascii[iDUTY][3];
+            Ventana_LCD[0][pos_der3] = conv[0];
+            Ventana_LCD[0][pos_der2] = conv[1];
+            Ventana_LCD[0][pos_der1] = conv[2];
+            Ventana_LCD[0][pos_der0] = conv[3];
         break;
+        Nop();
+        Nop();
+        Nop();
 
         default:
         break;

@@ -1,0 +1,1 @@
+ -c -mcpu=$(MP_PROCESSOR_OPTION)        -g -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -I"../../../../../../../../Program Files (x86)/Microchip/xc16/v1.36/support/PIC24H/h" -O0 -I"../" -msmart-io=1 -Wall -msfr-warn=off   C:\Users\amq18\Documents\GitHub\miNuevoDSE\PIC24H_P6\P6_OCPWM_v1\LCD.c
